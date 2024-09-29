@@ -58,7 +58,7 @@ class ImageOCR:
         if paragraph:
             extracted_text.append(" ".join(paragraph))
         language_info = ", ".join([lang.upper() for lang in detected_languages])
-        final_text = "\n\n".join(extracted_text
+        final_text = "\n\n".join(extracted_text)
         return f"Detected Languages: {language_info}\n\n{final_text}"
                                  
 if __name__ == "__main__":
