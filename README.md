@@ -1,98 +1,74 @@
 
-# OCR and Streamlit App
+# Assignment: OCR and Document Search Web Application Prototype
 
-This project includes two Python scripts: one for performing Optical Character Recognition (OCR) on images and the other for creating a simple user interface using Streamlit for specific functionalities.
+This repository has two scripts: 
+- `ocr.py`, which executes Optical Character Recognition (OCR) on images.
+- `streamlit_script.py`, a web interface built with Streamlit for displaying OCR results.
 
-## Table of Contents
+The app is live and can be accessed here: **[Streamlit App](https://iit-ocr-rahuljiandani.streamlit.app/)**.
 
-- [OCR Script (`ocr.py`)](#ocr-script-ocrpy)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Example](#example)
-- [Streamlit Script (`streamlit_script.py`)](#streamlit-script-streamlit_scriptpy)
-  - [Installation](#installation-1)
-  - [Usage](#usage-1)
-  - [Running the Streamlit App](#running-the-streamlit-app)
-- [Dependencies](#dependencies)
+## Environment Setup
 
----
+### Python Dependencies
+1. Clone or download the repository.
+2. Install required Python libraries via:
 
-## OCR Script (`ocr.py`)
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-This script performs Optical Character Recognition (OCR) on input images, extracting text data and processing it for further use.
+### System Dependencies
+For OCR, system libraries are essential. Add the following to a `packages.txt` file for Streamlit deployment or install them locally on Linux:
 
-### Installation
-
-1. Clone the repository or download the script.
-2. Install the required dependencies:
-
-```bash
-pip install pytesseract pillow
+```
+libgl1-mesa-glx
+libsm6
+libxext6
 ```
 
-Make sure you have [Tesseract-OCR](https://github.com/tesseract-ocr/tesseract) installed on your system. For example, on Ubuntu:
 
-```bash
-sudo apt install tesseract-ocr
-```
+## Running the Application Locally
 
-On macOS, you can install it using Homebrew:
+1. **OCR Script**: Run the OCR script as follows:
 
-```bash
-brew install tesseract
-```
+   ```bash
+   python ocr.py <path_to_image>
+   ```
 
-### Usage
+2. **Streamlit App**: Start the Streamlit app with:
 
-You can use this script by passing an image file to it. For example:
+   ```bash
+   streamlit run streamlit_script.py
+   ```
 
-```bash
-python ocr.py <path_to_image>
-```
+The app will be available at `http://localhost:8501`.
 
-### Example
+## Deployment Process
 
-```bash
-python ocr.py ./sample_image.png
-```
+To deploy on Streamlit:
+1. Include both `requirements.txt` and `packages.txt`.
+2. Deploy the repository to Streamlit Cloud.
 
-This will output the extracted text from the image.
-
----
-
-## Streamlit Script (`streamlit_script.py`)
-
-This script creates a simple user interface using Streamlit. The UI accepts inputs and displays the result of operations such as predictions or analysis.
-
-### Installation
-
-1. Install the required libraries:
-
-```bash
-pip install streamlit
-```
-
-### Usage
-
-Run the Streamlit app using the following command:
-
-```bash
-streamlit run streamlit_script.py
-```
-
-### Running the Streamlit App
-
-Once you run the above command, the Streamlit app will be available on `localhost:8501` by default. Open a web browser and navigate to `http://localhost:8501` to use the app.
-
----
+The live version can be accessed here: **[Streamlit App](https://iit-ocr-rahuljiandani.streamlit.app/)**.
 
 ## Dependencies
 
-Both scripts depend on the following Python packages:
+The Python and system dependencies are listed in `requirements.txt` and `packages.txt`:
 
-- `pytesseract` (for OCR functionality)
-- `Pillow` (for image handling)
-- `Streamlit` (for building the UI)
+- **Python Packages**:
+  ```
+  easyocr
+  langdetect
+  numpy
+  opencv-python
+  pillow
+  pytesseract
+  streamlit
+  ```
 
-Make sure all dependencies are installed using the commands provided in the [Installation](#installation) sections above.
-
+- **System Libraries**:
+  ```
+  libgl1-mesa-glx
+  libsm6
+  libxext6
+  ```
