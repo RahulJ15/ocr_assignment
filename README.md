@@ -45,9 +45,11 @@ The app will be available at `http://localhost:8501`.
 
 ## Deployment Process
 
-To deploy on Streamlit:
-1. Include both `requirements.txt` and `packages.txt`.
-2. Deploy the repository to Streamlit Cloud.
+1. Pushed code to a GitHub repository.
+2. The repository includes:
+requirements.txt for Python dependencies
+packages.txt for system dependencies
+3. Deployed to Streamlit Cloud by linking the repository.
 
 The live version can be accessed here: **[Streamlit App](https://iit-ocr-rahuljiandani.streamlit.app/)**.
 
