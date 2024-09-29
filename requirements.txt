@@ -1,0 +1,7 @@
+easyocr
+langdetect
+numpy
+opencv-python
+pillow
+pytesseract
+streamlit
